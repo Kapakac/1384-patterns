@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/characters', [CharacterController::class, 'index']);
+Route::get('/characters/{character}/{weapon}', [CharacterController::class, 'show']);

@@ -2,12 +2,14 @@
 
 namespace App\Abstracts;
 
+/**
+ * Архитектурный паттерн "Стратегия"
+ */
 abstract class Character
 {
-    abstract public function fight(): string;
-
     public string $weaponBehavior;
 
+    abstract public function fight(): string;
 
     public function setWeaponBehavior(string $weaponBehavior): void
     {

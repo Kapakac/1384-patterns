@@ -3,18 +3,46 @@
 namespace App\Http\Controllers\Characters;
 
 use App\Models\WeaponBehaviors\SwordBehavior;
+use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
-use App\Models\Characters\Queen;
+use Illuminate\Validation\Rule;
+use Illuminate\Http\Request;
 
 class CharacterController extends Controller
 {
-    public function index()
+    public function index(): string
     {
-        $queen = new Queen();
-        $swordWeapon = new SwordBehavior();
-        $queen->setWeaponBehavior($swordWeapon->useWeapon());
-
-        return $queen->fight() . ' и ' . mb_strtolower($queen->weaponBehavior);
+        return '';
     }
 
+    /**
+     * Просто хардкодный пример ТОЛЬКО для демо-отображения паттерна "Стратегия"
+     */
+    public function show(Request $request)
+    {
+        $params = $request->route()->parameters();
+        $validator = Validator::make($params, [
+            'character' => [
+                'required',
+                Rule::in(['king', 'queen']),
+            ],
+            'weapon' => [
+                'required',
+                Rule::in(['axe', 'sword']),
+            ]
+        ]);
+
+        if ($validator->fails()) {
+            abort(404);
+        }
+
+        $character = 'App\\Models\\Characters\\' . ucfirst($params['character']);
+        $character = new $character();
+        $weapon = 'App\\Models\\WeaponBehaviors\\' . ucfirst($params['weapon']) . 'Behavior';
+        $weapon = new $weapon();
+
+        $character->setWeaponBehavior($weapon->useWeapon());
+
+        return $character->fight() . ' и ' . mb_strtolower($character->weaponBehavior);
+    }
 }
