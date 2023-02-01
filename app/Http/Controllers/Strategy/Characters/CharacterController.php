@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Characters;
+namespace App\Http\Controllers\Strategy\Characters;
 
 use App\Models\WeaponBehaviors\SwordBehavior;
 use Illuminate\Support\Facades\Validator;

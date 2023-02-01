@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\Characters;
+namespace App\Models\Strategy\Characters;
 
-use App\Abstracts\Character;
+use App\Abstracts\Strategy\Character;
 
 class King extends Character
 {

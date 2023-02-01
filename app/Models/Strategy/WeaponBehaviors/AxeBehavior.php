@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Models\WeaponBehaviors;
+namespace App\Models\Strategy\WeaponBehaviors;
 
-use App\Contracts\WeaponBehavior;
+use App\Contracts\Strategy\WeaponBehavior;
 
 class AxeBehavior implements WeaponBehavior
 {

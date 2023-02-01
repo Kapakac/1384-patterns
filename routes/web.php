@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Characters\CharacterController;
+use App\Http\Controllers\Strategy\Characters\CharacterController;
 use Illuminate\Support\Facades\Route;
 
 /*
