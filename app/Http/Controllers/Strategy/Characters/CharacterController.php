@@ -1,8 +1,7 @@
 <?php
 
-namespace App\Http\Controllers\Characters;
+namespace App\Http\Controllers\Strategy\Characters;
 
-use App\Models\WeaponBehaviors\SwordBehavior;
 use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Validation\Rule;
@@ -36,9 +35,9 @@ class CharacterController extends Controller
             abort(404);
         }
 
-        $character = 'App\\Models\\Characters\\' . ucfirst($params['character']);
+        $character = 'App\\Models\\Strategy\\Characters\\' . ucfirst($params['character']);
         $character = new $character();
-        $weapon = 'App\\Models\\WeaponBehaviors\\' . ucfirst($params['weapon']) . 'Behavior';
+        $weapon = 'App\\Models\\Strategy\\WeaponBehaviors\\' . ucfirst($params['weapon']) . 'Behavior';
         $weapon = new $weapon();
 
         $character->setWeaponBehavior($weapon->useWeapon());
