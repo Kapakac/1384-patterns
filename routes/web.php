@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Strategy\Characters\CharacterController;
+use App\Http\Controllers\Observer\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 
 Route::get('/characters', [CharacterController::class, 'index']);
 Route::get('/characters/{character}/{weapon}', [CharacterController::class, 'show']);
+
+Route::get('/orders', [OrderController::class, 'show']);
