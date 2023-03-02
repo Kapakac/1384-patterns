@@ -2,9 +2,6 @@
 
 namespace App\Abstracts\Strategy;
 
-/**
- * Архитектурный паттерн "Стратегия"
- */
 abstract class Character
 {
     public string $weaponBehavior;

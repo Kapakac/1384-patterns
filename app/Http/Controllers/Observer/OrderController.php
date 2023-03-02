@@ -14,7 +14,7 @@ class OrderController extends Controller
     /**
      * Просто хардкодный пример ТОЛЬКО для демо-отображения паттерна "Наблюдатель"
      */
-    public function show(Request $request)
+    public function index(Request $request)
     {
         $orderRepository = new OrderRepository();
         $orderRepository->attach(new EmailNotice());
