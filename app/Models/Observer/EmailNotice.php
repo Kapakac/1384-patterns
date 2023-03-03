@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models\Observer;
 
 use App\Abstracts\Observer\Observer;

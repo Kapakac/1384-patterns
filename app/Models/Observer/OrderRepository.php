@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models\Observer;
 
 use Carbon\Carbon;
@@ -7,6 +9,7 @@ use Carbon\Carbon;
 class OrderRepository implements \SplSubject
 {
     public \DateTime $deliveryAt;
+
     private \SplObjectStorage $observers;
 
     public function __construct()

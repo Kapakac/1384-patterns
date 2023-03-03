@@ -7,6 +7,7 @@ use App\Contracts\Decorator\Topping;
 abstract class Beverage implements Topping
 {
     public string $description;
+
     public SizeBeverage $size;
 
     public function __construct()
