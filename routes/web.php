@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Strategy\Characters\CharacterController;
+use App\Http\Controllers\Command\RemoteControlController;
 use App\Http\Controllers\Decorator\BeverageController;
 use App\Http\Controllers\Singleton\BoilerController;
 use App\Http\Controllers\Observer\OrderController;
@@ -29,3 +30,5 @@ Route::get('/orders', [OrderController::class, 'index']);
 Route::get('/beverages', [BeverageController::class, 'index']);
 
 Route::get('/boilers', [BoilerController::class, 'index']);
+
+Route::get('/commands', [RemoteControlController::class, 'index']);
