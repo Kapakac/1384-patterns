@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Adapter\BirdController;
 use App\Http\Controllers\Strategy\Characters\CharacterController;
 use App\Http\Controllers\Command\RemoteControlController;
 use App\Http\Controllers\Decorator\BeverageController;
@@ -32,3 +33,5 @@ Route::get('/beverages', [BeverageController::class, 'index']);
 Route::get('/boilers', [BoilerController::class, 'index']);
 
 Route::get('/commands', [RemoteControlController::class, 'index']);
+
+Route::get('/birds', [BirdController::class, 'index']);
