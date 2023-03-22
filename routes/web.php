@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\Iterator\MenuController;
 use App\Http\Controllers\Strategy\Characters\CharacterController;
 use App\Http\Controllers\Command\RemoteControlController;
 use App\Http\Controllers\Facade\HomeTheaterController;
@@ -8,6 +7,7 @@ use App\Http\Controllers\Decorator\BeverageController;
 use App\Http\Controllers\Singleton\BoilerController;
 use App\Http\Controllers\Observer\OrderController;
 use App\Http\Controllers\Template\DrinkController;
+use App\Http\Controllers\Iterator\MenuController;
 use App\Http\Controllers\Adapter\BirdController;
 use Illuminate\Support\Facades\Route;
 
