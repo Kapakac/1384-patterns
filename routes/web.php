@@ -6,6 +6,7 @@ use App\Http\Controllers\Facade\HomeTheaterController;
 use App\Http\Controllers\Decorator\BeverageController;
 use App\Http\Controllers\Singleton\BoilerController;
 use App\Http\Controllers\Observer\OrderController;
+use App\Http\Controllers\Template\DrinkController;
 use App\Http\Controllers\Adapter\BirdController;
 use Illuminate\Support\Facades\Route;
 
@@ -38,3 +39,5 @@ Route::get('/commands', [RemoteControlController::class, 'index']);
 Route::get('/birds', [BirdController::class, 'index']);
 
 Route::get('/hometheaters', [HomeTheaterController::class, 'index']);
+
+Route::get('/drinks', [DrinkController::class, 'index']);
