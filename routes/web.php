@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Iterator\MenuController;
 use App\Http\Controllers\Strategy\Characters\CharacterController;
 use App\Http\Controllers\Command\RemoteControlController;
 use App\Http\Controllers\Facade\HomeTheaterController;
@@ -41,3 +42,5 @@ Route::get('/birds', [BirdController::class, 'index']);
 Route::get('/hometheaters', [HomeTheaterController::class, 'index']);
 
 Route::get('/drinks', [DrinkController::class, 'index']);
+
+Route::get('/menu/iterator', [MenuController::class, 'index']);
