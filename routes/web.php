@@ -11,6 +11,7 @@ use App\Http\Controllers\Singleton\BoilerController;
 use App\Http\Controllers\Observer\OrderController;
 use App\Http\Controllers\Template\DrinkController;
 use App\Http\Controllers\Adapter\BirdController;
+use App\Http\Controllers\Proxy\PeopleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,3 +51,5 @@ Route::get('/menu/iterator', [IteratorMenuController::class, 'index']);
 Route::get('/menu/composite', [CompositeMenuController::class, 'index']);
 
 Route::get('/gumball-machines', [GumballMachineController::class, 'index']);
+
+Route::get('/people', [PeopleController::class, 'index']);
