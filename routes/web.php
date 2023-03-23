@@ -10,6 +10,7 @@ use App\Http\Controllers\Decorator\BeverageController;
 use App\Http\Controllers\Singleton\BoilerController;
 use App\Http\Controllers\Observer\OrderController;
 use App\Http\Controllers\Template\DrinkController;
+use App\Http\Controllers\Factory\PizzaController;
 use App\Http\Controllers\Adapter\BirdController;
 use App\Http\Controllers\Proxy\PeopleController;
 use Illuminate\Support\Facades\Route;
@@ -53,3 +54,5 @@ Route::get('/menu/composite', [CompositeMenuController::class, 'index']);
 Route::get('/gumball-machines', [GumballMachineController::class, 'index']);
 
 Route::get('/people', [PeopleController::class, 'index']);
+
+Route::get('/pizza', [PizzaController::class, 'index']);
