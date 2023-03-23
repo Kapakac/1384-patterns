@@ -4,6 +4,7 @@ use App\Http\Controllers\Composite\MenuController as CompositeMenuController;
 use App\Http\Controllers\Iterator\MenuController as IteratorMenuController;
 use App\Http\Controllers\Strategy\Characters\CharacterController;
 use App\Http\Controllers\Command\RemoteControlController;
+use App\Http\Controllers\State\GumballMachineController;
 use App\Http\Controllers\Facade\HomeTheaterController;
 use App\Http\Controllers\Decorator\BeverageController;
 use App\Http\Controllers\Singleton\BoilerController;
@@ -47,3 +48,5 @@ Route::get('/drinks', [DrinkController::class, 'index']);
 Route::get('/menu/iterator', [IteratorMenuController::class, 'index']);
 
 Route::get('/menu/composite', [CompositeMenuController::class, 'index']);
+
+Route::get('/gumball-machines', [GumballMachineController::class, 'index']);
